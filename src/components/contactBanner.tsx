@@ -9,7 +9,7 @@ export const ContactBanner = () => {
     <span>
       {contactList.map((contact, index) => (
         <span key={index}>
-          <a className="underline" href={contact.url}>
+          <a className="underline" href={contact.url} target="_blank">
             {contact.label}
           </a>
           {index < contactList.length - 1 && " | "}
