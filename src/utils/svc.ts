@@ -1,4 +1,5 @@
-import { IPinnedRepositories } from "./types";
+import { SITE_DATA } from "../models/siteData";
+import { IPinnedRepositories } from "../models/types";
 
 export const fetchPinnedRepos = async (): Promise<IPinnedRepositories[]> => {
   const query = `{
@@ -16,7 +17,7 @@ export const fetchPinnedRepos = async (): Promise<IPinnedRepositories[]> => {
       }
     }`;
 
-  const response = await fetch("https://api.github.com/graphql", {
+  const response = await fetch(SITE_DATA.githubPinnedProjectsUrl, {
     method: "POST",
     headers: {
       Authorization: `bearer ${process.env.GITHUB_API_KEY}`,

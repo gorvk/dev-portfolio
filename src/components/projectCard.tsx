@@ -1,4 +1,4 @@
-import { IPinnedRepositories } from "../utils/types";
+import { IPinnedRepositories } from "../models/types";
 
 export const ProjectCard = (props: { repository: IPinnedRepositories }) => {
   const { repository } = props;

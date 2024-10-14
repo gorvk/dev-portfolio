@@ -1,11 +1,8 @@
+import { SITE_DATA } from "../models/siteData";
+import { IContactList } from "../models/types";
+
 export const ContactBanner = () => {
-  type IContactList = { label: string; url: string };
-  const contactList: IContactList[] = [
-    { label: "github", url: "https://github.com/gorvk" },
-    { label: "linkedin", url: "https://linkedin.com/in/gorvk" },
-    { label: "mail", url: "mailto:gstar1525@gmail.com" },
-    { label: "resume", url: "https://bit.ly/gorvkfe" },
-  ];
+  const contactList: IContactList[] = SITE_DATA.navbarLinks;
   return (
     <span>
       {contactList.map((contact, index) => (
